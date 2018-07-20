@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+              <record id="it_view_invited_tree" model="ir.ui.view">
+                   <field name="name">invitado_invited_views</field>
+           <field name="model">helpdesk.tag</field>
+             <field name="inherit_id" ref="helpdesk.helpdesk_tag_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="invited_ids"  widget="many2many_tags"></field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
